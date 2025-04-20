@@ -5,11 +5,11 @@ const jwt = require("jsonwebtoken")
 const userSignUp = async (req, res) => {
     const { email, password } = req.body
     if (!email || !password) {
-        return res.status(400).json({ message: "Email and password is required" })
+        return res.status(400).json({ message: "Email and password are required" })
     }
     let user = await User.findOne({ email })
     if (user) {
-        return res.status(400).json({ error: "Email is already exist" })
+        return res.status(400).json({ error: "Email already exists" })
     }
     const hashPwd = await bcrypt.hash(password, 10)
     const newUser = await User.create({
@@ -23,7 +23,7 @@ const userSignUp = async (req, res) => {
 const userLogin = async (req, res) => {
     const { email, password } = req.body
     if (!email || !password) {
-        return res.status(400).json({ message: "Email and password is required" })
+        return res.status(400).json({ message: "Email and password are required" })
     }
     let user = await User.findOne({ email })
     if (user && await bcrypt.compare(password, user.password)) {
@@ -31,7 +31,7 @@ const userLogin = async (req, res) => {
         return res.status(200).json({ token, user })
     }
     else {
-        return res.status(400).json({ error: "Invaild credientials" })
+        return res.status(400).json({ error: "Wrong email or password" })
     }
 }
 
