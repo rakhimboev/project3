@@ -83,8 +83,12 @@ section {
   background-color: #2c4860;
 }
 
-.home .left h5 {
+.home .left h4 {
   margin: 2rem 0;
+}
+
+.home .right img{
+  border-radius: 50%;
 }
 
 .bg svg {
