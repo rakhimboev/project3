@@ -51,7 +51,7 @@ export default function RecipeItems() {
                                             <div className='action'>
                                                 <Link to={`/editRecipe/${item._id}`} className="editIcon"><FaEdit /></Link>
                                                 <MdDelete onClick={() => onDelete(item._id)} className='deleteIcon' />
-                                            </div>
+                                            </div> 
                                         }
                                     </div>
                                 </div>

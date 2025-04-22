@@ -31,7 +31,7 @@ const addRecipe=async(req,res)=>{
     {
         res.json({message:"Required fields can't be empty"})
     }
-
+ 
     const newRecipe=await Recipes.create({
         title,ingredients,instructions,time,coverImage:req.file.filename,
         createdBy:req.user.id

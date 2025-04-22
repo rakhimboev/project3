@@ -21,5 +21,5 @@ export default function RecipeDetails() {
         </div>
     </div>
    </>
-  )
+  ) 
 }
