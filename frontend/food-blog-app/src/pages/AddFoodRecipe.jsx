@@ -46,6 +46,6 @@ export default function AddFoodRecipe() {
                     <button type="submit">Add Recipe</button>
                 </form>
             </div>
-        </>
+        </> 
     )
 }

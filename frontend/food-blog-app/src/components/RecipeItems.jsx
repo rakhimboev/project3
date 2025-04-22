@@ -45,7 +45,7 @@ export default function RecipeItems() {
                                 <div className='card-body'>
                                     <div className='title'>{item.title}</div>
                                     <div className='icons'>
-                                        <div className='timer'><BsStopwatchFill />{item.time}</div>
+                                        <div className='timer'><BsStopwatchFill />{item.time}</div> 
                                         {(!path) ? <FaHeart onClick={() => favRecipe(item)}
                                             style={{ color: (favItems.some(res => res._id === item._id)) ? "red" : "" }} /> :
                                             <div className='action'>
